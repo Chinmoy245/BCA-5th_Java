@@ -1,3 +1,4 @@
+//Introduction to Java
 import java.util.Scanner;
 
 class StudentInfo {
@@ -34,4 +35,56 @@ class StudentInfo {
         sc.close();
     }
 }
+//Arithmetic operations with switch-case
 
+import java.util.Scanner;
+
+class CalculatorSwitch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+
+        System.out.println("Choose operation: 1.Add  2.Subtract  3.Multiply  4.Divide");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1: System.out.println("Result = " + (a + b)); break;
+            case 2: System.out.println("Result = " + (a - b)); break;
+            case 3: System.out.println("Result = " + (a * b)); break;
+            case 4:
+                if (b != 0)
+                    System.out.println("Result = " + (a / b));
+                else
+                    System.out.println("Error: Division by zero!");
+                break;
+            default: System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}
+
+//Check even or odd (if-else)
+import java.util.Scanner;
+
+class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even.");
+        } else {
+            System.out.println(num + " is Odd.");
+        }
+
+        sc.close();
+    }
+}
